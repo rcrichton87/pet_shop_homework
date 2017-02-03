@@ -36,7 +36,7 @@ end
 def find_pet_by_name(pet_shop_hash, search_name)
   pets_array = pet_shop_hash[:pets]
   for pet in pets_array
-    if pet[:name] == search_name
+    if pet[:name] == search_name then
       return pet
     end
   end
@@ -58,4 +58,14 @@ end
 
 def add_pet_to_customer(customer, pet)
   customer[:pets].push(pet)
+end
+
+def customer_can_afford_pet(customer, pet)
+  customer_cash = customer[:cash]
+  pet_price = pet[:price]
+  if customer_cash < pet_price 
+    return false
+  else
+    return true
+  end
 end
