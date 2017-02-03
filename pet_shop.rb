@@ -47,3 +47,7 @@ def remove_pet_by_name(pet_shop_hash, remove_name)
   pet_to_remove = find_pet_by_name(pet_shop_hash, remove_name)
   pet_shop_hash[:pets].delete(pet_to_remove)
 end
+
+def add_pet_to_stock(pet_shop_hash, new_pet)
+  pet_shop_hash[:pets].push(new_pet)
+end
