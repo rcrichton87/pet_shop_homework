@@ -9,3 +9,7 @@ end
 def add_or_remove_cash(pet_shop_hash, cash_change)
   new_cash = pet_shop_hash[:admin][:total_cash] += cash_change
 end
+
+def pets_sold(pet_shop_hash)
+  number_pets_sold = pet_shop_hash[:admin][:pets_sold]
+end
