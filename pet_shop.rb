@@ -17,3 +17,18 @@ end
 def increase_pets_sold(pet_shop_hash, number_sold)
   new_total_sold = pet_shop_hash[:admin][:pets_sold] += number_sold
 end
+
+def stock_count(pet_shop_hash)
+  stock = pet_shop_hash[:pets].length
+end
+
+def pets_by_breed(pet_shop_hash, breed_name)
+  pets_array = pet_shop_hash[:pets] #array containing all pets
+  breed_array = []
+  for pet in pets_array #for each individual pet in pets_array
+    if pet[:breed] == breed_name #if the animal breed is the breed being checked
+      breed_array.push(pet[:breed]) #add it to the breed_array
+    end
+  end
+  return breed_array
+end
